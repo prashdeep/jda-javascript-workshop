@@ -1,0 +1,24 @@
+Javascript Introduction
+Javascript vs ECMAScript 
+Versions of ECMAScript
+data types 
+variables 
+Object literals
+Functions 
+Programming paradigms
+Functions deep dive 
+   functions as variales 
+   functions passing functions 
+   function returning function 
+this keyword
+  inside the object 
+  inside a function
+  inside a inner function 
+call, apply and bind 
+hoisting
+Closures 
+Currying 
+DOM Manipulation 
+Inheritance 
+   Prototypal Inheritance 
+   new keyword 

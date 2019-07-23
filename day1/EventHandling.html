@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Event Handling</title>
+    <style>
+        #parentDiv{
+            width: 400px;
+            height: 400px;
+            background-color: tomato;
+            font-size: 24px;
+            color:#eeeeee;
+        }
+        a {
+            display: block;
+            width: 100px;
+            height: 100px;
+            background-color: goldenrod;
+            font-size: 24px;
+            color:black;
+            text-align: center;
+            position: relative;
+            top:50;
+            right:50;
+        }
+    </style>
+</head>
+<body>
+    <div id="parentDiv">
+        <div>
+            <a id="btn">Click Me !!</a>
+        </div>
+    </div>
+
+</body>
+<script>
+    document.querySelector('#parentDiv').addEventListener('click', function(){
+        console.log(this);
+    })
+
+    document.querySelector('#btn').addEventListener('click', function(event){
+        console.log(this);
+        event.stopPropagation();
+    })
+</script>
+</html>

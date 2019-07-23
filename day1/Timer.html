@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Timer</title>
+    <style>
+        #container{
+            width:500px;
+            height:500px;
+            background-color: tomato;
+            color:white;
+            font-size: 80px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="container">
+        <div id="placeholder"></div>
+
+        <button id="start">Start</button>
+        <button id="stop">Stop`</button>
+    </div>
+
+
+</body>
+<script>
+      var counter = 0;
+      var timer;
+       document.querySelector('#start').addEventListener('click', function(){
+        timer = setInterval(function(){
+            document.querySelector('#placeholder').innerHTML = ++counter;
+      }, 1000);
+       });
+       document.querySelector('#stop').addEventListener('click', function(){
+           clearInterval(timer);
+           counter = 0;
+           document.querySelector('#placeholder').innerHTML = counter;
+       }); 
+</script>
+</html>
