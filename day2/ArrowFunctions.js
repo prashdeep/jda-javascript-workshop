@@ -263,7 +263,6 @@ const users = [
  console.log(user);
  */
 
- console.log('sdfdsf');
  users.map(user =>user.name)
  .map(name => '<li>'+name+'</li>')
  .forEach(name => console.log(name));

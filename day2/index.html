@@ -249,7 +249,7 @@ const users = [
   ]
 
   const ulElem = document.createElement('ul');
-  const lis = users.map(user =>user.name)
+  /*const lis = users.map(user =>user.name)
  .map(name => {
      const liItem = document.createElement('li');
      //liItem.innerText(name);
@@ -261,8 +261,15 @@ const users = [
      liItem.style.fontSize = '24px';
      liItem.style.color = 'white';
     });
+*/
 
-document.querySelector('#users').appendChild(ulElem);
+const lis = users.map(user =>user.name)
+                .map(name => `<li>${name}</li>`).join('')
+ document.querySelector('#users').innerHTML = `<ul> ${lis}</ul>`;
+
+//document.querySelector('#users').appendChild(ulElem);
+
+
 
 </script>
 </html>
