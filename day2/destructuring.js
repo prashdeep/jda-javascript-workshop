@@ -38,7 +38,7 @@ var user={
   const { name:username, phone: userphone,website:web} = user;
 console.log(`${username} with ( ${userphone} ) and having website with domain ${web}`)
 
-let displayUserName = function({usernam:username} = {username:'Default User'}){
+let displayUserName = function({usernam:username = "Default"} ){
     console.log(`${username}`)
 }
 
