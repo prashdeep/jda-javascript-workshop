@@ -1,21 +1,19 @@
-let printName = function(name){
-    console.log(name);
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Users</title>
+</head>
+<body>
 
-
-let printNameUsingArrowFun = (name)=> console.log(name);
-
-printNameUsingArrowFun('Ravi')
-
-
-let numbers= [23,45,67,12,22,24,89];
-
-let filterLT45 = (number) => number < 45;
-
-let filteredNumbers = numbers.filter(number => number < 45)
-
-console.log(filteredNumbers)
-
+    <div id="users">
+        Hello
+    </div>
+    
+</body>
+<script>
 
 const users = [
     {
@@ -250,20 +248,21 @@ const users = [
     }
   ]
 
- /*const user = users.filter(user => user.id > 6)
-                             .map(user => ({
-                                 id:user.id,
-                                 name:user.name,
-                                 email:user.email
-                             }))
-                             .find(emp => emp.id === 7)
-                             //.reduce((p,c) => p + c);
-                             //.forEach(name => console.log('The name of the user is '+name.name));
-  
- console.log(user);
- */
+  const ulElem = document.createElement('ul');
+  const lis = users.map(user =>user.name)
+ .map(name => {
+     const liItem = document.createElement('li');
+     //liItem.innerText(name);
+     liItem.innerHTML = name;
+     ulElem.appendChild(liItem);
+     liItem.style.padding = '10 px';
+     liItem.style.backgroundColor='tomato';
+     liItem.style.margin = '10px';
+     liItem.style.fontSize = '24px';
+     liItem.style.color = 'white';
+    });
 
- console.log('sdfdsf');
- users.map(user =>user.name)
- .map(name => '<li>'+name+'</li>')
- .forEach(name => console.log(name));
+document.querySelector('#users').appendChild(ulElem);
+
+</script>
+</html>
