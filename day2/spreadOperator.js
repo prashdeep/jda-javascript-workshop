@@ -19,6 +19,6 @@ let user = {
     salary:45000
 }
 
-const{name, ...rest} = user;
+const { name, ...useProperties} = user;
 
-console.log(rest);
+console.log(useProperties);
