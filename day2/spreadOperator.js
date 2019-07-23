@@ -12,3 +12,13 @@ const players=['Virat','Rohit','Dhoni','Hardik'];
 
 console.log(`Captain is ${captain}, Vice Captain is ${vCaptain} and rest of the players are ${rest}`)
 console.log(rest);
+
+let user = {
+    name:'Rahul',
+    age:34,
+    salary:45000
+}
+
+const{name, ...rest} = user;
+
+console.log(rest);
