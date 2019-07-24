@@ -7,6 +7,9 @@
     <title>HTML Forms</title>
 </head>
 <body>
+    <div id="error">
+
+    </div>
     <form action="post>
         First Name: <input type="text" name='fName' placeholder="Enter first name">
         <br/>
@@ -36,6 +39,7 @@
         document.getElementById('city').addEventListener('change', function(event){
             console.log('came inside the change method ')
             console.log (event);
+            document.getElementById('error').innerHTML = 'Invalid city';
         })
 </script>
 </html>

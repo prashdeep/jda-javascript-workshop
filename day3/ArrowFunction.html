@@ -51,22 +51,17 @@
             this.innerText = this.innerText === 'Submitted !!'? 'Submit': 'Submitted !!';
             this.style.backgroundColor = this.style.backgroundColor === 'blue'? 'white':'blue';
             this.style.color = this.style.color === 'black'? 'red':'black';
-            this.parentElement.style.width = '600px';
+            //this.parentElement.style.width = '600px';
             this.parentElement.style.backgroundColor='goldenrod';
         }
         innerFunc();
     });
 
-    divContainer.addEventListener('mouseover', function(){
+    divContainer.addEventListener('mouseenter', function(){
         console.log('came inside the mouser over event ')
         let innerFunc = () => {
-            console.log('about to print the this value')
-            console.log(this.innerText);
-            this.innerText = this.innerText === 'Submitted !!'? 'Submit': 'Submitted !!';
-            this.style.backgroundColor = this.style.backgroundColor === 'blue'? 'white':'blue';
-            this.style.color = this.style.color === 'black'? 'red':'black';
-            this.parentElement.style.width = '600px';
-            this.parentElement.style.backgroundColor='goldenrod';
+            console.log(this.classList)
+            this.classList.toggle('.container-big');
         }
         innerFunc();
     });

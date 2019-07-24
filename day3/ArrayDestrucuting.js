@@ -1,4 +1,5 @@
 const player=['Virat','India', 'T20-World cup', 450];
+
 /*const name = player[0];
 const teamName = player[1];
 const tournamentName = player[2];

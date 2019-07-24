@@ -1,4 +1,5 @@
 function arrayFromDemo(a,b,c,d){
+
     console.log(arguments);
 }
 
