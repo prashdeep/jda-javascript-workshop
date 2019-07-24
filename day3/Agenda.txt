@@ -1,0 +1,25 @@
+
+ES6 classes
+Set
+  - does not allow duplicates
+  - cannot access by index
+  - values - returns an iterator
+   - entries - key value pair, key and value both are same
+Iterator
+WeakSet
+Map
+Asyn await
+Math 
+Date
+Regex
+
+To be covered in session 13
+CommonJs
+ES6 modules
+ES6 transpilation
+Node Installation
+Introduction to npm
+package.json
+Introduction to babel
+Introduction to Browserify
+

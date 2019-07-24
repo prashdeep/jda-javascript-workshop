@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arrow Function This binding</title>
+    <style>
+        #container{
+            width: 500px;
+            height:500px;
+            background-color: tomato;
+            color:white;
+            font-size: 25px;
+        }
+
+        .container-big{
+            width: 800px;
+            height:800px;
+        }
+        a {
+            background-color: white;
+            padding:10px;
+            display: block;
+            width: 80%;
+            margin:0 auto;
+            position: relative; 
+            top:25%;
+            text-align: center;
+            text-decoration: none;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <a href="#" id="submit">Submit !!</a>
+    </div>
+    
+</body>
+<script>
+    const submitBtn = document.getElementById('submit');
+    const divContainer = document.getElementById('container');
+
+    submitBtn.addEventListener('click', function(){
+        let innerFunc = () => {
+            console.log('about to print the this value')
+            console.log(this.innerText);
+            this.innerText = this.innerText === 'Submitted !!'? 'Submit': 'Submitted !!';
+            this.style.backgroundColor = this.style.backgroundColor === 'blue'? 'white':'blue';
+            this.style.color = this.style.color === 'black'? 'red':'black';
+            this.parentElement.style.width = '600px';
+            this.parentElement.style.backgroundColor='goldenrod';
+        }
+        innerFunc();
+    });
+
+    divContainer.addEventListener('mouseover', function(){
+        console.log('came inside the mouser over event ')
+        let innerFunc = () => {
+            console.log('about to print the this value')
+            console.log(this.innerText);
+            this.innerText = this.innerText === 'Submitted !!'? 'Submit': 'Submitted !!';
+            this.style.backgroundColor = this.style.backgroundColor === 'blue'? 'white':'blue';
+            this.style.color = this.style.color === 'black'? 'red':'black';
+            this.parentElement.style.width = '600px';
+            this.parentElement.style.backgroundColor='goldenrod';
+        }
+        innerFunc();
+    });
+
+    function handleSubmit(){
+
+        console.log(`Submit button is clicked !!`);
+    }
+</script>
+</html>

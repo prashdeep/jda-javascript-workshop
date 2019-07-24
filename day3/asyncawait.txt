@@ -1,0 +1,85 @@
+function scaryClown() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('🤡');
+    }, 2000);
+  });
+}
+
+async function msg() {
+  const msg = await scaryClown();
+  console.log('Message:', msg);
+}
+
+msg(); // Message: 🤡 <-- after 2 seconds
+
+
+
+function who() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('🤡');
+    }, 200);
+  });
+}
+
+function what() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('lurks');
+    }, 300);
+  });
+}
+
+function where() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('in the shadows');
+    }, 500);
+  });
+}
+
+async function msg() {
+  const a = await who();
+  const b = await what();
+  const c = await where();
+
+  console.log(`${ a } ${ b } ${ c }`);
+}
+
+msg(); // 🤡 lurks in the shadows <-- after 1 second
+
+
+async function msg() {
+  const [a, b, c] = await Promise.all([who(), what(), where()]);
+
+  console.log(`${ a } ${ b } ${ c }`);
+}
+
+msg(); // 🤡 lurks in the shadows <-- after 500ms
+
+async function hello() {
+  return 'Hello Alligator!';
+}
+
+const b = hello();
+
+console.log(b); // [object Promise] { ... }
+
+async function hello() {
+  return 'Hello Alligator!';
+}
+
+const b = hello();
+
+b.then(x => console.log(x)); // Hello Alligator!
+
+async function fetchUsers(endpoint) {
+  const res = await fetch(endpoint);
+  let data = await res.json();
+
+  data = data.map(user => user.username);
+
+  console.log(data);
+}
+fetchUsers('https://jsonplaceholder.typicode.com/users');

@@ -1,0 +1,77 @@
+let and const
+array methods
+    map
+    filter
+    reduce
+arrow function
+  when it should not be used
+  inside event handlers
+  when using prototype
+  outerfunction
+  arguments is undefined
+
+Destructuring objects
+    alias const {firstname:fname, lastname:lname} = person
+    default values {width=100, height:h = 45} = rectangle
+Destructuring arrays
+   [name, age]=data.split(',');
+
+    rest operator
+    [captain, vcaptain, ...players]=['df','dff,'dfdf','dfdf']
+
+    swapping variables
+    batsman='virat';
+    runner='Dhoni';
+
+    [runner,batsman]=[batsman,runner];
+
+    convertCurrency(amount){
+        return {AUD:amount * 1.45,
+        INR:amount * 1.5,
+        USD:amount *2}
+    }
+
+    let {USD} = convertCurrency(100);
+
+    function calculateBill({amount, tax = 0.15, tip = 2}={}//in case the callee passes{}){
+        return amount + tax*amount + tip
+    } 
+
+for of loop on arrays
+for in loop on object
+
+    for ( const i in Object.keys(obj)){obj[i]}
+
+Arrays from and of 
+   used on list of divs
+   used with arguments
+
+   arguments.reduce  is not an iterable
+    Array.of(1,2,3,4);
+
+    Array.find and findIndex
+    Array some and Array every
+
+Spread operator
+    example using array and string
+    copy array show example of reference udating the older array
+    nodelist to map [...document.querySelector('p')]
+    cannot work for map
+    var array1=[1,2,3,4]
+    var array2=[7,8,9,10]
+    array2.push(...array1);
+    arrays accepted by function fun(...arr){}
+rest operator
+
+setTimeout
+Promises
+    resolve
+    reject
+
+Symbols
+Iterators
+Generators    
+
+
+
+

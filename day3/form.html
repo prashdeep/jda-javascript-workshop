@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML Forms</title>
+</head>
+<body>
+    <form action="post>
+        First Name: <input type="text" name='fName' placeholder="Enter first name">
+        <br/>
+        Second Name: <input type="text" name='lName' placeholder="Enter last name">
+        <br/>
+        City: <select name="city" id="city">
+            <option value="bangalore">Bangalore</option>
+            <option value="chennai">Chennai</option>
+            <option value="pune">Pune</option>
+            <option value="mumbai">Mumbai</option>
+        </select>
+        <br/>
+        <button type="submit">Submit</button>
+    </form>
+    
+</body>
+
+<script>
+        document.forms[0].addEventListener('submit', function(evemt){
+            event.preventDefault();
+            event.stopPropagation();
+            console.log('Inside the form submission ')
+            let firstName = event.target.fName.value;
+            console.log(firstName)
+        });
+
+        document.getElementById('city').addEventListener('change', function(event){
+            console.log('came inside the change method ')
+            console.log (event);
+        })
+</script>
+</html>

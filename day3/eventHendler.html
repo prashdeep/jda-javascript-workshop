@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Event Handler Demo</title>
+<style>
+    .container{
+        width: 500px;
+        margin:0 auto;
+        text-align: center;
+        background-color:tomato;
+        padding:50px;
+    }
+    .on{
+        background-color: goldenrod;
+    }
+    button{
+        font-size: 50px;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <button id="push">Click</button>
+    </div>    
+</body>
+<script>
+    const btn = document.querySelector('#push');
+    
+    btn.addEventListener('click',function(){
+        console.log(this);
+        this.classList.toggle('on');
+    })
+</script>
+</html>

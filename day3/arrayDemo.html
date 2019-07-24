@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array Demo</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+let handle = fetch('https://jsonpaceholder.typicode.com/todos');
+
+console.log('We moved ahead after making the call.. ');
+
+console.log('finally we want the result from the response');
+handle.then((response) => response.json())
+       .then(users => console.log(users))
+       .catch(error => console.log(`$$$$$$$$$$ ${error} $$$$$$$$`))
+</script>
+</html>
