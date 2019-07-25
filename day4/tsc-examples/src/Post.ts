@@ -1,5 +1,7 @@
 class Post {
 
+    private comments: string[];
+
     constructor(private _title:string, private _authorName:string, private _noOfLikes:number = 0){
 
     }

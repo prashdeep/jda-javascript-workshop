@@ -1,21 +1,13 @@
-import Post,{namedExport} from "./Post";
+class User {
+    constructor(private _id, private _name, private _username, private _email){}
 
-let post1 = new Post('Closures', 'Ravi');
-post1.like();
-post1.like();
-post1.like();
-post1.like();
-post1.like();
-post1.like();
-post1.like();
+    get id(){
+        return this._id;
+    }
 
-console.log(post1.noOfLikes);
+    get name(){
+        return this._name;
+    }
+}
 
-post1.unlike();
-post1.unlike();
-post1.unlike();
-post1.unlike();
-
-console.log(`Number of updated Likes ${post1.noOfLikes}`)
-
-namedExport('Called outside the module !!!!')
+export default User;
