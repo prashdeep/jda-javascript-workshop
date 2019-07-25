@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/font-awesome.css">
+</head>
+<body>
+    <div id="post">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere inventore saepe placeat maxime architecto quia, nihil sint eveniet ab ducimus? Veniam aliquid ex dolor inventore tempora. Asperiores fugit repudiandae a facilis architecto tenetur nobis iure, magnam veniam officia illo? Ducimus.
+    </div>
+    <p>
+    Like: <span id="like">0</span>
+    </p>
+
+
+
+
+</body>
+<script src="Post.js"/>
+<script>
+    console.log('Inside the script tag')
+     const likeSpan = document.querySelector('#like')
+     console.log(likeSpan);   
+    likeSpan.addEventListener('click', function(){
+        console.log(post1.like());
+    })
+</script>
+
+
+</html>

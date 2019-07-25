@@ -1,0 +1,18 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+    var Post_1 = require("./Post");
+var post1 = new Post_1.default('Closures', 'Ravi');
+post1.like();
+post1.like();
+post1.like();
+post1.like();
+post1.like();
+post1.like();
+post1.like();
+console.log(post1.noOfLikes);
+post1.unlike();
+post1.unlike();
+post1.unlike();
+post1.unlike();
+console.log("Number of updated Likes " + post1.noOfLikes);
+Post_1.namedExport('Called outside the module !!!!');

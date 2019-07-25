@@ -1,0 +1,19 @@
+{
+  "name": "day4",
+  "version": "1.0.0",
+  "description": "creating the project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^12.6.8",
+    "jquery": "^3.4.1",
+    "lodash": "^4.17.15"
+  },
+  "devDependencies": {
+    "typescript": "^3.5.3"
+  }
+}

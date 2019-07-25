@@ -1,0 +1,23 @@
+{
+  "name": "tsc-examples",
+  "version": "1.0.0",
+  "description": "Examples on Typescript\r Check the version of Node\r    node --version\r Install angular CLI\r    npm install -g @angular/cli\r Check the version of Angular CLI\r   ng --version\r Install Typescript\r   npm install -g typescript\r Check the version of typescript\r   tsc --version\r Transpiling the Typescript to Javascript\r   tsc filename.ts",
+  "main": "main.js",
+  "scripts": {
+    "compile": "tsc",
+    "build": "echo build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prashdeep/tsc-examples.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prashdeep/tsc-examples/issues"
+  },
+  "homepage": "https://github.com/prashdeep/tsc-examples#readme",
+  "dependencies": {
+    "font-awesome": "^4.7.0"
+  }
+}
